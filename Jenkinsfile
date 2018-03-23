@@ -3,7 +3,7 @@ pipeline {
   stages {
     stage('Build') {
       steps {
-        sh 'ping -c 3 localhost'
+        sh 'echo build'
       }
     }
   }
