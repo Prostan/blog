@@ -19,6 +19,7 @@ pipeline {
       steps {
         sh 'echo uint-tests'
         sh 'echo Data integrity test'
+        echo 'mock - It allows you to replace parts of your system under test with mock objects and make assertions about how they have been used.'
       }
     }
     stage('Front-end') {
