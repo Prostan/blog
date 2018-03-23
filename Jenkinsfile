@@ -15,7 +15,7 @@ pipeline {
         }
       }
     }
-    stage('Back-end') {
+    stage('Back-End Tests') {
       steps {
         sh 'echo uint-tests'
         sh 'echo Data integrity test'
@@ -23,7 +23,7 @@ pipeline {
         echo 'Hypothesis - library which lets you write tests that are parametrized by a source of examples. It then generates simple and comprehensible examples that make your tests fail, letting you find more bugs with less work.'
       }
     }
-    stage('Front-end') {
+    stage('Front-End Tests') {
       steps {
         sh 'echo React tests'
       }
