@@ -31,7 +31,7 @@ pipeline {
       steps {
         sh 'echo Deploy BE Code'
         sh 'echo Deploy FE code'
-        sh 'Deploy DB code'
+        sh 'echo Deploy DB code'
       }
     }
     stage('End to End Tests') {
