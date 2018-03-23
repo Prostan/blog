@@ -20,6 +20,7 @@ pipeline {
         sh 'echo uint-tests'
         sh 'echo Data integrity test'
         echo 'mock - It allows you to replace parts of your system under test with mock objects and make assertions about how they have been used.'
+        echo 'Hypothesis - library which lets you write tests that are parametrized by a source of examples. It then generates simple and comprehensible examples that make your tests fail, letting you find more bugs with less work.'
       }
     }
     stage('Front-end') {
