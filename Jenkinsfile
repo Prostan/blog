@@ -36,8 +36,17 @@ pipeline {
       }
     }
     stage('End to End Tests') {
-      steps {
-        sh 'echo End To End test'
+      parallel {
+        stage('End to End Tests') {
+          steps {
+            sh 'echo End To End test'
+          }
+        }
+        stage('Performance Tests') {
+          steps {
+            sh 'echo Gatling or k6'
+          }
+        }
       }
     }
   }
