@@ -28,7 +28,7 @@ pipeline {
         sh 'echo React tests'
       }
     }
-    stage('Deploy') {
+    stage('Stage Deploy') {
       steps {
         sh 'echo Deploy BE Code'
         sh 'echo Deploy FE code'
@@ -47,6 +47,11 @@ pipeline {
             sh 'echo Gatling or k6'
           }
         }
+      }
+    }
+    stage('Prod Manual Deploy') {
+      steps {
+        sh 'echo Manual deploy'
       }
     }
   }
