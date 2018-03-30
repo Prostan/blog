@@ -50,8 +50,17 @@ pipeline {
       }
     }
     stage('Prod Manual Deploy') {
-      steps {
-        sh 'echo Manual deploy'
+      parallel {
+        stage('Prod Manual Deploy') {
+          steps {
+            sh 'echo Manual deploy'
+          }
+        }
+        stage('some stage') {
+          steps {
+            sleep 1
+          }
+        }
       }
     }
   }
